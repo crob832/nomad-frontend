@@ -1,0 +1,32 @@
+To turn the React design I just gave you into a real, manageable website where non-coders (editors) can update content, you need to use a Headless CMS.
+
+In a traditional CMS (like WordPress), the content and the design are glued together. In a Headless CMS, they are separate:
+
+The CMS (Backend): Where editors log in to write articles and upload PDFs.
+
+The Website (Frontend): The React code I wrote, which "fetches" that content and displays it.
+
+
+Shutterstock
+Here is the step-by-step path to integrating this with Sanity.io (my top recommendation for this project because it has a great free tier, handles images beautifully, and is easy for students to learn).
+
+Phase 1: The Stack Switch
+The code I gave you is "Client-Side React." For a journal, you need SEO (so Google can read the articles).
+
+Move to Next.js: You should move that React component into a Next.js project. Next.js is a framework for React that handles the CMS connection and SEO perfectly.
+
+Phase 2: Define your "Schema" (The Content Models)
+In the CMS, you need to define what "data" looks like. Based on our design, you need three main content types:
+
+Issue: (Title, Year, Theme, Cover Image, PDF Upload)
+
+Article: (Title, Author, Degree, Abstract, Body Text, Category, Link to specific Issue)
+
+Team Member: (Name, Role, Major)
+
+Example of how this looks in code (Sanity Schema):
+sanity/schemas/article.js
+Dec 9, 5:11 PM
+
+Phase 3: Connecting the Frontend
+In the React code I gave you, I used a variable called ISSUES with fake data. We simply replace that fake data with a "fetch" call to the CMS.
