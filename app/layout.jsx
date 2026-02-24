@@ -15,7 +15,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen font-sans text-stone-900 bg-stone-50">
+      <body className="min-h-screen font-sans text-ink bg-paper">
         {children}
       </body>
     </html>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Download, MoveLeft } from "lucide-react";
 import ArticleCard from "@/components/ArticleCard";
 import SectionTitle from "@/components/SectionTitle";
@@ -47,11 +48,11 @@ export default async function IssueDetailPage({ params }) {
 
   return (
     <SiteLayout settings={settings}>
-      <div className="animate-fade-in py-20 bg-stone-50 min-h-screen">
+      <div className="animate-fade-in py-20 bg-paper min-h-screen">
         <div className="container mx-auto px-6 md:px-12">
           <Link
             href="/issues"
-            className="inline-flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors mb-10"
+            className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors mb-10"
           >
             <MoveLeft size={16} />
             Back to Issues
@@ -59,9 +60,15 @@ export default async function IssueDetailPage({ params }) {
 
           <div className="grid md:grid-cols-12 gap-10 items-start">
             <div className="md:col-span-4">
-              <div className="aspect-[3/4] relative overflow-hidden border border-stone-200 shadow-md bg-stone-300">
+              <div className="aspect-[3/4] relative overflow-hidden border border-border-default shadow-md bg-slate-200">
                 {issue.coverImageUrl ? (
-                  <img src={issue.coverImageUrl} alt={issue.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <Image
+                    src={issue.coverImageUrl}
+                    alt={issue.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="absolute inset-0 object-cover"
+                  />
                 ) : coverPdfPreview ? (
                   <iframe
                     src={coverPdfPreview}
@@ -78,14 +85,14 @@ export default async function IssueDetailPage({ params }) {
 
             <div className="md:col-span-8">
               <SectionTitle subtitle="Issue Theme">{issue.title}</SectionTitle>
-              <p className="text-lg text-stone-700 leading-relaxed mb-8">{issue.theme}</p>
+              <p className="text-lg text-ink-soft leading-relaxed mb-8">{issue.theme}</p>
 
               {issue.pdfUrl && (
                 <a
                   href={issue.pdfUrl}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 text-white hover:bg-orange-800 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand text-white hover:bg-brand-strong transition-colors"
                 >
                   <Download size={16} />
                   Download Full Issue (PDF)
@@ -97,7 +104,7 @@ export default async function IssueDetailPage({ params }) {
           <section className="mt-20">
             <SectionTitle subtitle="Contents">Articles in this Issue</SectionTitle>
             {articles.length === 0 ? (
-              <p className="text-stone-600">No articles are published for this issue yet.</p>
+              <p className="text-ink-muted">No articles are published for this issue yet.</p>
             ) : (
               <div className="grid grid-cols-1 gap-4">
                 {articles.map((article) => (

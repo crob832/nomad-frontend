@@ -243,7 +243,7 @@ const singletonDocs = [
         "Students produce major research projects near the end of their degree, but those projects often do not get read beyond assessment.",
         "Nomad was created to bring that work into public view. We are a living archive of how the student body interprets global change year over year."
       ],
-      archiveCaption: "Archive: Global Studies Cohort, 2023"
+      archiveCaption: "Archive: The University of Auckland"
     },
     defaultSeo: {
       _type: "defaultSeo",

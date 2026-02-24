@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MoveLeft } from "lucide-react";
 import PortableTextContent from "@/components/PortableTextContent";
 import SiteLayout from "@/components/SiteLayout";
@@ -64,18 +65,18 @@ export default async function ArticlePage({ params }) {
         <div className="container mx-auto px-6 md:px-12 max-w-4xl">
           <Link
             href={issueHref}
-            className="inline-flex items-center gap-2 text-sm text-stone-500 hover:text-stone-900 transition-colors mb-10"
+            className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors mb-10"
           >
             <MoveLeft size={16} />
             {article.issue ? `Back to ${article.issue}` : "Back to Issues"}
           </Link>
 
-          <header className="border-b border-stone-200 pb-8 mb-10">
-            <p className="text-xs uppercase tracking-[0.2em] text-orange-700 font-bold mb-3">{article.category}</p>
-            <h1 className="font-serif text-4xl md:text-6xl text-stone-900 leading-tight mb-5">{article.title}</h1>
-            <p className="text-lg text-stone-600 leading-relaxed mb-6">{article.abstract}</p>
-            <div className="flex flex-wrap items-center gap-3 text-sm text-stone-500">
-              <span className="font-medium text-stone-700">{article.author}</span>
+          <header className="border-b border-border-default pb-8 mb-10">
+            <p className="text-xs uppercase tracking-[0.2em] text-brand font-bold mb-3">{article.category}</p>
+            <h1 className="font-serif text-4xl md:text-6xl text-ink leading-tight mb-5">{article.title}</h1>
+            <p className="text-lg text-ink-muted leading-relaxed mb-6">{article.abstract}</p>
+            <div className="flex flex-wrap items-center gap-3 text-sm text-ink-muted">
+              <span className="font-medium text-ink-soft">{article.author}</span>
               {article.degree && <span className="italic">{article.degree}</span>}
               {article.readTime && <span>{article.readTime}</span>}
               {publishedLabel && <span>{publishedLabel}</span>}
@@ -83,10 +84,13 @@ export default async function ArticlePage({ params }) {
           </header>
 
           {article.heroImageUrl && (
-            <img
+            <Image
               src={article.heroImageUrl}
               alt={article.title}
-              className="w-full h-[420px] object-cover mb-12 border border-stone-200"
+              width={1600}
+              height={900}
+              sizes="(max-width: 1024px) 100vw, 896px"
+              className="w-full h-[420px] object-cover mb-12 border border-border-default"
             />
           )}
 

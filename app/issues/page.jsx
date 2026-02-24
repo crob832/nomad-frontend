@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import SiteLayout from "@/components/SiteLayout";
@@ -21,7 +22,7 @@ export default async function IssuesPage() {
 
   return (
     <SiteLayout settings={settings}>
-      <div className="animate-fade-in py-24 bg-stone-50 min-h-screen">
+      <div className="animate-fade-in py-24 bg-paper min-h-screen">
         <div className="container mx-auto px-6 md:px-12">
           <SectionTitle subtitle="The Archive">Published Editions</SectionTitle>
 
@@ -37,9 +38,15 @@ export default async function IssuesPage() {
                 <article key={issue.id} className="group">
                   {directPdfHref ? (
                     <a href={directPdfHref} target="_blank" rel="noreferrer noopener" className="block">
-                      <div className="aspect-[3/4] mb-6 relative overflow-hidden border border-stone-200 shadow-lg transition-transform duration-500 group-hover:-translate-y-2 bg-stone-100">
+                      <div className="aspect-[3/4] mb-6 relative overflow-hidden border border-border-default shadow-lg transition-transform duration-500 group-hover:-translate-y-2 bg-paper-alt">
                         {issue.coverImageUrl ? (
-                          <img src={issue.coverImageUrl} alt={issue.title} className="absolute inset-0 w-full h-full object-cover" />
+                          <Image
+                            src={issue.coverImageUrl}
+                            alt={issue.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            className="absolute inset-0 object-cover"
+                          />
                         ) : coverPdfPreview ? (
                           <iframe
                             src={coverPdfPreview}
@@ -54,18 +61,24 @@ export default async function IssuesPage() {
                       </div>
 
                       <div className="pr-4">
-                        <h4 className="text-xl font-serif text-stone-900 mb-2">{issue.title}</h4>
-                        <p className="text-sm text-stone-500 leading-relaxed mb-4">{issue.theme}</p>
-                        <span className="text-xs font-bold uppercase tracking-wider text-orange-800 flex items-center gap-2 hover:gap-3 transition-all">
+                        <h4 className="text-xl font-serif text-ink mb-2">{issue.title}</h4>
+                        <p className="text-sm text-ink-muted leading-relaxed mb-4">{issue.theme}</p>
+                        <span className="text-xs font-bold uppercase tracking-wider text-brand flex items-center gap-2 hover:gap-3 transition-all">
                           Open Issue PDF <ArrowRight size={12} />
                         </span>
                       </div>
                     </a>
                   ) : (
                     <Link href={issueHref} className="block">
-                      <div className="aspect-[3/4] mb-6 relative overflow-hidden border border-stone-200 shadow-lg transition-transform duration-500 group-hover:-translate-y-2 bg-stone-100">
+                      <div className="aspect-[3/4] mb-6 relative overflow-hidden border border-border-default shadow-lg transition-transform duration-500 group-hover:-translate-y-2 bg-paper-alt">
                         {issue.coverImageUrl ? (
-                          <img src={issue.coverImageUrl} alt={issue.title} className="absolute inset-0 w-full h-full object-cover" />
+                          <Image
+                            src={issue.coverImageUrl}
+                            alt={issue.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            className="absolute inset-0 object-cover"
+                          />
                         ) : coverPdfPreview ? (
                           <iframe
                             src={coverPdfPreview}
@@ -80,9 +93,9 @@ export default async function IssuesPage() {
                       </div>
 
                       <div className="pr-4">
-                        <h4 className="text-xl font-serif text-stone-900 mb-2">{issue.title}</h4>
-                        <p className="text-sm text-stone-500 leading-relaxed mb-4">{issue.theme}</p>
-                        <span className="text-xs font-bold uppercase tracking-wider text-orange-800 flex items-center gap-2 hover:gap-3 transition-all">
+                        <h4 className="text-xl font-serif text-ink mb-2">{issue.title}</h4>
+                        <p className="text-sm text-ink-muted leading-relaxed mb-4">{issue.theme}</p>
+                        <span className="text-xs font-bold uppercase tracking-wider text-brand flex items-center gap-2 hover:gap-3 transition-all">
                           View Contents <ArrowRight size={12} />
                         </span>
                       </div>

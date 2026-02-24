@@ -1,0 +1,13 @@
+blue_mountain_gradient, maybe use this underneath the right side of the hero section, reduce opacity maybe ?
+
+logo(black) , actual nomad logo just logo
+
+logotype(black) , logo text, put on top instead of hwats existing on top.
+
+global_studies_cohort use for the Archive: Global Studies Cohort, 2023 placeholder section
+
+augss_logo , logo of the uoa global studies add to the bottom to show affiliation?
+
+uoa_logo , logo of uoa add to the bottom to show affiliation.
+
+upto you these are just suggestions but make sure you do use all of them.
