@@ -211,7 +211,7 @@ const HomePage = ({ navigate }) => (
               </div>
               <div className="bg-white p-6 border border-stone-200">
                 <Globe className="text-orange-800 mb-4" size={24} />
-                <h4 className="font-serif text-xl mb-2">Interdisciplinary</h4>
+                <h4 className="font-serif text-xl mb-2">Transdisciplinary</h4>
                 <p className="text-sm text-stone-500">Bridging politics, environment, culture, and economy.</p>
               </div>
             </div>
@@ -356,7 +356,7 @@ const AboutPage = () => (
           Nomad is an independent, student-led undergraduate publication tied to Global Studies at the University of Auckland. Our main purpose is to showcase student academic work and connect the Global Studies community—students, staff, alumni, and prospective students.
         </p>
         <p>
-          Nomad functions as a public mirror of the programme. It demonstrates the interdisciplinary identity of Global Studies by showcasing work across different majors and area studies. It reinforces the idea that the degree isn’t only theoretical—it generates analysis of real global issues with local-to-global framing.
+          Nomad functions as a public mirror of the programme. It demonstrates the transdisciplinary identity of Global Studies by showcasing work across different majors and area studies. It reinforces the idea that the degree isn’t only theoretical—it generates analysis of real global issues with local-to-global framing.
         </p>
       </div>
 

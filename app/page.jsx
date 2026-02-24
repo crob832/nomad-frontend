@@ -142,7 +142,7 @@ export default async function HomePage() {
                   </div>
                   <div className="bg-white p-6 border border-border-default">
                     <Globe2 className="text-accent mb-4" size={24} />
-                    <h4 className="font-serif text-xl mb-2">Interdisciplinary</h4>
+                    <h4 className="font-serif text-xl mb-2">Transdisciplinary</h4>
                     <p className="text-sm text-ink-muted">Bridging politics, environment, culture, and economy.</p>
                   </div>
                 </div>
