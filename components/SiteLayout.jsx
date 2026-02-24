@@ -36,7 +36,7 @@ export default function SiteLayout({ children, settings }) {
   return (
     <div className="min-h-screen bg-paper text-ink selection:bg-accent-soft selection:text-ink">
       <nav className="sticky top-0 z-50 bg-paper/90 backdrop-blur-md border-b border-border-default">
-        <div className="container mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 h-20 flex items-center justify-between">
           <Link href="/" className="z-50">
             <div className="flex items-center gap-2 md:gap-3">
               <Image
@@ -114,7 +114,7 @@ export default function SiteLayout({ children, settings }) {
         <div className="absolute inset-0 surface-grid opacity-20" aria-hidden="true" />
         <div className="absolute inset-0 surface-topo opacity-30" aria-hidden="true" />
 
-        <div className="container mx-auto px-6 md:px-12 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="md:col-span-2">
               <h2 className="font-serif text-2xl text-white mb-6 flex items-center gap-2">
@@ -169,7 +169,7 @@ export default function SiteLayout({ children, settings }) {
             <p>&copy; {currentYear} Nomad Journal. All rights reserved.</p>
             <div className="mt-4 md:mt-0 flex flex-col md:flex-row items-center gap-3">
               <p>University of Auckland Global Studies</p>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap justify-center">
                 <span className="text-[10px] uppercase tracking-widest text-slate-500">Affiliated with</span>
                 <Image
                   src={augssLogoUrl}

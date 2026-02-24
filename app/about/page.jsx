@@ -33,7 +33,7 @@ export default async function AboutPage() {
   return (
     <SiteLayout settings={settings}>
       <div className="animate-fade-in py-24 bg-paper min-h-screen">
-        <div className="container mx-auto px-6 md:px-12 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-4xl">
           <SectionTitle subtitle={about.subtitle}>{about.title}</SectionTitle>
 
           <div className="space-y-12 text-lg text-ink-soft font-light leading-relaxed">
@@ -88,3 +88,4 @@ export default async function AboutPage() {
     </SiteLayout>
   );
 }
+

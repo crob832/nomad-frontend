@@ -2,6 +2,12 @@ import "./globals.css";
 import { getSiteSettings } from "@/lib/cms";
 import { buildMetadata } from "@/lib/seo";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover"
+};
+
 export async function generateMetadata() {
   const settings = await getSiteSettings();
   return buildMetadata({

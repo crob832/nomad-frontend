@@ -53,7 +53,7 @@ export default async function HomePage() {
             </svg>
           </div>
 
-          <div className="container mx-auto px-6 md:px-12 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
             <div className="max-w-4xl">
               <span className="inline-block py-1 px-3 border border-ink text-ink text-xs font-bold uppercase tracking-widest mb-6">
                 {hero.badge}
@@ -94,7 +94,7 @@ export default async function HomePage() {
         </section>
 
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 md:px-12">
+          <div className="container mx-auto px-4 sm:px-6 md:px-12">
             <SectionTitle subtitle="Selected Works">Featured Analysis</SectionTitle>
             <div className="grid grid-cols-1 gap-4">
               {featured.map((article) => (
@@ -113,7 +113,7 @@ export default async function HomePage() {
         </section>
 
         <section className="py-24 bg-paper-alt border-y border-border-default">
-          <div className="container mx-auto px-6 md:px-12">
+          <div className="container mx-auto px-4 sm:px-6 md:px-12">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <Image
@@ -154,3 +154,4 @@ export default async function HomePage() {
     </SiteLayout>
   );
 }
+

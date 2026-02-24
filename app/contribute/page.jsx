@@ -28,7 +28,7 @@ export default async function ContributePage() {
   return (
     <SiteLayout settings={settings}>
       <div className="animate-fade-in py-24 bg-white min-h-screen">
-        <div className="container mx-auto px-6 md:px-12 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 max-w-5xl">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-serif text-ink mb-6">{contribute.heading}</h1>
             <p className="text-xl text-ink-muted font-light leading-relaxed">{contribute.intro}</p>

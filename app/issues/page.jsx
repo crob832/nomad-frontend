@@ -23,7 +23,7 @@ export default async function IssuesPage() {
   return (
     <SiteLayout settings={settings}>
       <div className="animate-fade-in py-24 bg-paper min-h-screen">
-        <div className="container mx-auto px-6 md:px-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12">
           <SectionTitle subtitle="The Archive">Published Editions</SectionTitle>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -110,3 +110,4 @@ export default async function IssuesPage() {
     </SiteLayout>
   );
 }
+
