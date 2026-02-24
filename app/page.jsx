@@ -36,7 +36,7 @@ export default async function HomePage() {
         <section className="relative min-h-[85vh] flex flex-col justify-center border-b border-border-default bg-paper paper-glow overflow-hidden">
           <div className="absolute inset-0 surface-grid opacity-20" aria-hidden="true" />
           <div className="absolute inset-0 surface-topo opacity-35" aria-hidden="true" />
-          <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-brand/10 overflow-hidden">
+          <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full bg-brand/10 overflow-hidden">
             <Image
               src={heroGradientUrl}
               alt="Blue mountain gradient texture"
