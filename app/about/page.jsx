@@ -28,7 +28,7 @@ export default async function AboutPage() {
     .slice(0, 1);
   const resolvedCurrentBoard = currentBoard.length > 0
     ? currentBoard
-    : [{ id: "team-dulmi", role: "Editor-in-Chief", name: "Dulmi", major: "" }];
+    : [{ id: "team-dulmi", role: "Editor-in-Chief", name: "Dulmi De Silva", major: "" }];
 
   return (
     <SiteLayout settings={settings}>

@@ -207,7 +207,7 @@ const teamDocs = [
   {
     _id: "team-dulmi",
     _type: "teamMember",
-    name: "Dulmi",
+    name: "Dulmi De Silva",
     role: "Editor-in-Chief",
     major: "",
     displayOrder: 1,

@@ -79,14 +79,14 @@ async function run() {
   await client.createOrReplace({
     _id: "team-dulmi",
     _type: "teamMember",
-    name: "Dulmi",
+    name: "Dulmi De Silva",
     role: "Editor-in-Chief",
     major: "",
     displayOrder: 1,
     active: true
   });
 
-  console.log("Updated board label to 2026 and set only Dulmi as active team member.");
+  console.log("Updated board label to 2026 and set only Dulmi De Silva as active team member.");
 }
 
 run().catch((error) => {
